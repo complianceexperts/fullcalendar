@@ -224,6 +224,10 @@ NOTE: use percentage font sizes or else old IE chokes
     line-height: 1.5;
 }
 
+.fc-state-default:focus {
+	outline: none;
+}
+
 .fc-state-hover,
 .fc-state-down,
 .fc-state-active,
