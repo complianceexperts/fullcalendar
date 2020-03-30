@@ -45,6 +45,7 @@
     "basic/BasicView.js",
     "basic/MonthView.js",
     "basic/YearView.js",
+    "basic/ResourceView.js",
     "basic/config.js",
     "agenda/AgendaView.js",
     "agenda/config.js",
@@ -55,6 +56,7 @@
   "fullcalendar.css": [
     "common/common.css",
     "main.css",
+    "basic/resource.css",
     "basic/year.css",
     "basic/basic.css",
     "agenda/agenda.css",

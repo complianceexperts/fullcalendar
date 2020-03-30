@@ -28,3 +28,8 @@ fcViews.year = {
 		fixedWeekCount: true
 	}
 };
+
+fcViews.resource = {
+	'class': ResourceView,
+	duration: { weeks: 4 }
+};
