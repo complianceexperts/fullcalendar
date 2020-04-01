@@ -18,6 +18,12 @@ var ResourceView = FC.ResourceView = View.extend({
 		if (!this.options.groupBy) {
 			console.error('must specify groupBy option for Resource View');
 		}
+
+		this.watch('executeDateRender', [ 'dateProfile', 'initialEvents' ], function(deps) {
+			this.executeDateRender(deps.dateProfile);
+		}, function() {
+			this.executeDateUnrender();
+		});
 	
 		this.scroller = new Scroller({
 			overflowX: 'hidden',
@@ -35,39 +41,8 @@ var ResourceView = FC.ResourceView = View.extend({
 	},
 
 
-	// if dateProfile not specified, uses current
-	executeDateRender: function(dateProfile, skipScroll) {	
-		var view = this;
-
-		view.setDateProfileForRendering(dateProfile);
-		view.updateTitle();
-		view.calendar.updateToolbarButtons();
-
-		// Fetch the intial events
-		var promise = this.fetchInitialEvents({
-			activeRange: {
-				start: view.renderRange.start,
-				end: view.renderRange.end
-			}
-		});
-
-		promise.then(function() {	
-			if (this.render) {
-				this.render(); // TODO: deprecate
-			}
-			
-			view.renderDates();
-			view.updateSize();
-			view.renderBusinessHours(); // might need coordinates, so should go after updateSize()
-			view.startNowIndicator();
-
-			if (!skipScroll) {
-				view.addScroll(view.computeInitialDateScroll());
-			}
-
-			view.isDatesRendered = true;
-			view.trigger('datesRendered');
-		});
+	// Bypass this to defer date render after event loaded, also see this.watch('executeDateRender') in initialize()
+	requestDateRender: function(dateProfile) {
 	},
 
 
@@ -107,6 +82,9 @@ var ResourceView = FC.ResourceView = View.extend({
 				dayGrid.removeElement();
 			});
 		}
+
+		// Get rid of the existing view
+		this.el.empty();
 
 		this.scroller.destroy();
 	},
@@ -215,7 +193,7 @@ var ResourceView = FC.ResourceView = View.extend({
 		this.dayGrids.forEach(function(dayGrid) {
 			dayGrid.unrenderEvents();
 		});
-	},
+	}
 });
 
 
