@@ -261,6 +261,10 @@ NOTE: use percentage font sizes or else old IE chokes
 	box-shadow: none;
 }
 
+.fc-toolbar button.fc-button {
+	text-transform: capitalize;
+}
+
 
 /* Buttons Groups
 --------------------------------------------------------------------------------------------------*/

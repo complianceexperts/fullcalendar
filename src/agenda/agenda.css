@@ -26,11 +26,11 @@
 }
 
 .fc-ltr .fc-axis {
-	text-align: right;
+	text-align: center;
 }
 
 .fc-rtl .fc-axis {
-	text-align: left;
+	text-align: center;
 }
 
 .ui-widget td.fc-axis {

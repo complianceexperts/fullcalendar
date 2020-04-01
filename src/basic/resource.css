@@ -9,14 +9,14 @@
 
 .fc-resource-main-table .fc-head-container .fc-resource-head-group-label {
     display: inline-block;
-    width: 10%;
+    width: 6%;
     padding: 5px;
     vertical-align: middle;
 }
 
 .fc-resource-main-table .fc-head-container .fc-resource-head-group-data {
     display: inline-block;
-    width: 89%;
+    width: 93%;
     border-left: solid 1px #ddd;
     vertical-align: middle;
 }
@@ -37,7 +37,7 @@
 
 .fc-resource-main-table .fc-resource-group-label {
     display: inline-block;
-    width: 10%;
+    width: 6%;
     overflow-wrap: break-word;
     word-wrap: break-word;
     vertical-align: middle;
@@ -46,7 +46,7 @@
 
 .fc-resource-main-table .fc-resource-group-data {
     display: inline-block;
-    width: 89%;
+    width: 93%;
     border-left: solid 1px #ddd;
     vertical-align: middle;
 }

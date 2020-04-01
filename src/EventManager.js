@@ -849,10 +849,6 @@ function EventManager() { // assumed to be a calendar
 
 		if (eventProps.allDay) {
 			eventProps.start.stripTime();
-			if (eventProps.end) {
-				// TODO: consider nextDayThreshold here? If so, will require a lot of testing and adjustment
-				eventProps.end.stripTime();
-			}
 		}
 		else {
 			if (!eventProps.start.hasTime()) {

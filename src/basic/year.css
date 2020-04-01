@@ -1,4 +1,12 @@
 /* YearView */
+.fc-year-view {
+	overflow: auto;
+}
+
+.fc-year-view table.fc-year-main-table{
+	min-width: 920px;
+}
+
 .fc-year-view .fc-body .fc-row {
 	min-height: 4em; /* ensure that all rows are at least this tall */
 }
