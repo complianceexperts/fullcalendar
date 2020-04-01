@@ -96,8 +96,9 @@ Calendar.defaults = {
 	handleWindowResize: true,
 	windowResizeDelay: 100, // milliseconds before an updateSize happens
 
-	longPressDelay: 1000
+	longPressDelay: 1000,
 	
+	noDataText: '<i class="fa fa-exclamation-circle"></i> No Data Found'
 };
 
 

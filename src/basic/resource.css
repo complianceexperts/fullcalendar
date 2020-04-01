@@ -50,3 +50,8 @@
     border-left: solid 1px #ddd;
     vertical-align: middle;
 }
+
+.fc-resource-main-table .fc-resource-no-data {
+    font-size: 24px;
+    text-align: center;
+}

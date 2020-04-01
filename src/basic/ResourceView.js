@@ -52,6 +52,11 @@ var ResourceView = FC.ResourceView = View.extend({
 
 		var events = view.get('currentEvents');
 
+		if (!events || events.length === 0) {
+			this.buildNoDataView();
+			return;
+		}
+
 		var groupId = view.options.groupBy.id;
 		var groupName = view.options.groupBy.name;
 
@@ -116,8 +121,9 @@ var ResourceView = FC.ResourceView = View.extend({
 			view.dayGrids.push(dayGrid);
 		});
 
+		this.scroller.render();
+
 		this.renderHead();
-		this.requestEventsRender(this.get('currentEvents'));
 	},
 
 
@@ -158,6 +164,26 @@ var ResourceView = FC.ResourceView = View.extend({
 
 		$(resourceViewElem).appendTo(this.el);
 	},
+
+
+	// Build no data view
+	buildNoDataView: function() {
+		// Get rid of the existing view
+		this.el.empty();
+
+		var resourceViewElem = '<div class="fc-resource-main-table">';
+		resourceViewElem += '<div class="fc-resource-no-data">';
+
+		resourceViewElem += this.opt('noDataText');
+
+		resourceViewElem += '</div>';
+		resourceViewElem += '</div>';
+
+		$(resourceViewElem).appendTo(this.el);
+
+		this.scroller.render();
+	},
+
 
 	// Determines whether each row should have a constant height
 	hasRigidRows: function() {
