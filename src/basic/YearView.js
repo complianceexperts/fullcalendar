@@ -112,7 +112,7 @@ var YearView = FC.YearView = View.extend({
 
 		this.currentRangeUnit = 'year';
 
-		this.firstDay = parseInt(this.opt('firstDay'), 10) || 1;
+		this.firstDay = parseInt(this.opt('firstDay'), 10) || 0;
 		this.firstMonth = parseInt(this.opt('firstMonth'), 10) || 0;
 
 		this.lastMonth = this.opt('lastMonth') || this.firstMonth+12;
