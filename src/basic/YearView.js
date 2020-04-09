@@ -283,7 +283,7 @@ var YearView = FC.YearView = View.extend({
 	},
 
 	daysInMonth: function(year, month) {
-		return FC.moment([ year, month, 0 ]).date();
+		return this.calendar.moment([ year, month, 0 ]).date();
 	},
 
 	interactionStart: function(ev) {
@@ -714,7 +714,7 @@ var YearView = FC.YearView = View.extend({
 			startMonth = (this.firstMonth + startMonth) % 12;
 		}
 
-		this.intervalStart = FC.moment([this.intervalStart.year(), startMonth, 1]);
+		this.intervalStart = this.calendar.moment([this.intervalStart.year(), startMonth, 1]);
 		this.intervalEnd = this.intervalStart.clone().add(this.nbMonths, 'months').add(-15, 'minutes');
 
 		this.start = this.intervalStart.clone();
@@ -759,7 +759,7 @@ var YearView = FC.YearView = View.extend({
 
 		// init days based on 2013-12 (1st is Sunday)
 		for (n=0; n<7; n++) {
-			weekNames[n] = FC.moment([ 2013, 11, 1+n ]).format('ddd');
+			weekNames[n] = this.calendar.moment([ 2013, 11, 1+n ]).format('ddd');
 		}
 
 		if (this.isBootstrap) {
@@ -777,7 +777,7 @@ var YearView = FC.YearView = View.extend({
 			var m = (this.intervalStart.month() + n);
 			var hiddenMonth = ($.inArray((m % 12), this.hiddenMonths) != -1);
 			var display = (hiddenMonth ? 'display:none;' : '');
-			var di = FC.moment([ miYear+(m / 12), (m % 12), 1 ]);
+			var di = this.calendar.moment([ miYear+(m / 12), (m % 12), 1 ]);
 			var monthName = capitaliseFirstLetter(di.format('MMMM'));
 			var monthID = di.format('YYYYMM');
 
@@ -964,7 +964,7 @@ var YearView = FC.YearView = View.extend({
 			var self = _this;
 			self.trigger('dayClick',
 				self,
-				FC.moment(this.getAttribute("data-date")),
+				self.calendar.moment(this.getAttribute("data-date")),
 				ev
 			);
 
