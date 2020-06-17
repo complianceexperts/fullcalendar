@@ -200,6 +200,8 @@ var ResourceView = FC.ResourceView = View.extend({
 	renderEvents: function(events) {
 		var view = this;
 
+		view.renderDates(); // This will refresh the resource groups
+		
 		var groupId = view.options.groupBy.id;
 
 		this.dayGrids.forEach(function(dayGrid) {
