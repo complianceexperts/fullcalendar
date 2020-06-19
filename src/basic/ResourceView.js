@@ -72,7 +72,9 @@ var ResourceView = FC.ResourceView = View.extend({
 				return g.id;
 			});
 			return index === ids.indexOf(thing.id);
-		})
+		}).sort(function(a, b) {
+			return b.id - a.id;
+		});
 
 		view.renderInGroups();
 	},
