@@ -375,7 +375,7 @@ var DayGrid = FC.DayGrid = Grid.extend(DayTableMixin, {
 		// inject each new event skeleton into each associated row
 		this.rowEls.each(function(row, rowNode) {
 			var rowEl = $(rowNode); // the .fc-row
-			var skeletonEl = $('<div class="fc-helper-skeleton"><table/></div>'); // will be absolutely positioned
+			var skeletonEl = $('<div class="fc-helper-skeleton"><table></table></div>'); // will be absolutely positioned
 			var skeletonTop;
 
 			// If there is an original segment, match the top position. Otherwise, put it at the row's top level

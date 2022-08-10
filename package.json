@@ -25,7 +25,7 @@
     "jquery": "2 - 3",
     "moment": "^2.9.0"
   },
-  "version": "3.4.2",
+  "version": "3.4.3",
   "releaseDate": "2020-06-18",
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -75,6 +75,10 @@
   ],
   "scripts": {
     "test": "gulp test:single",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.10"
   }
 }

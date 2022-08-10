@@ -280,7 +280,7 @@ function getIsLeftRtlScrollbars() { // responsible for caching the computation
 }
 
 function computeIsLeftRtlScrollbars() { // creates an offscreen test element, then removes it
-	var el = $('<div><div/></div>')
+	var el = $('<div><div></div></div>')
 		.css({
 			position: 'absolute',
 			top: -1000,

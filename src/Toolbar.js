@@ -35,7 +35,7 @@ function Toolbar(calendar, toolbarOptions) {
 
 		if (sections) {
 			if (!el) {
-				el = this.el = $("<div class='fc-toolbar "+ toolbarOptions.extraClasses + "'/>");
+				el = this.el = $("<div class='fc-toolbar "+ toolbarOptions.extraClasses + "'></div>");
 			}
 			else {
 				el.empty();
@@ -43,7 +43,7 @@ function Toolbar(calendar, toolbarOptions) {
 			el.append(renderSection('left'))
 				.append(renderSection('right'))
 				.append(renderSection('center'))
-				.append('<div class="fc-clear"/>');
+				.append('<div class="fc-clear"></div>');
 		}
 		else {
 			removeElement();
@@ -60,7 +60,7 @@ function Toolbar(calendar, toolbarOptions) {
 
 
 	function renderSection(position) {
-		var sectionEl = $('<div class="fc-' + position + '"/>');
+		var sectionEl = $('<div class="fc-' + position + '"></div>');
 		var buttonStr = toolbarOptions.layout[position];
 		var calendarCustomButtons = calendar.opt('customButtons') || {};
 		var calendarButtonText = calendar.opt('buttonText') || {};
@@ -206,7 +206,7 @@ function Toolbar(calendar, toolbarOptions) {
 				}
 
 				if (groupChildren.length > 1) {
-					groupEl = $('<div/>');
+					groupEl = $('<div></div>');
 					if (isOnlyButtons) {
 						groupEl.addClass('fc-button-group');
 					}

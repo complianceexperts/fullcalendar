@@ -74,7 +74,7 @@ var AgendaView = FC.AgendaView = View.extend({
 
 		this.scroller.render();
 		var timeGridWrapEl = this.scroller.el.addClass('fc-time-grid-container');
-		var timeGridEl = $('<div class="fc-time-grid" />').appendTo(timeGridWrapEl);
+		var timeGridEl = $('<div class="fc-time-grid" ></div>').appendTo(timeGridWrapEl);
 		this.el.find('.fc-body > tr > td').append(timeGridWrapEl);
 
 		this.timeGrid.setElement(timeGridEl);
@@ -133,7 +133,7 @@ var AgendaView = FC.AgendaView = View.extend({
 					'<tr>' +
 						'<td class="' + this.widgetContentClass + '">' +
 							(this.dayGrid ?
-								'<div class="fc-day-grid"/>' +
+								'<div class="fc-day-grid"></div>' +
 								'<hr class="fc-divider ' + this.widgetHeaderClass + '"/>' :
 								''
 								) +

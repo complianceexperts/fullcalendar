@@ -102,7 +102,7 @@ DayGrid.mixin({
 				if (segsBelow.length) {
 					td = cellMatrix[levelLimit - 1][col];
 					moreLink = _this.renderMoreLink(row, col, segsBelow);
-					moreWrap = $('<div/>').append(moreLink);
+					moreWrap = $('<div></div>').append(moreLink);
 					td.append(moreWrap);
 					moreNodes.push(moreWrap[0]);
 				}
@@ -146,7 +146,7 @@ DayGrid.mixin({
 							seg.leftCol + j,
 							[ seg ].concat(segsBelow) // count seg as hidden too
 						);
-						moreWrap = $('<div/>').append(moreLink);
+						moreWrap = $('<div></div>').append(moreLink);
 						moreTd.append(moreWrap);
 						segMoreNodes.push(moreTd[0]);
 						moreNodes.push(moreTd[0]);
@@ -292,7 +292,7 @@ DayGrid.mixin({
 				'<span class="fc-title">' +
 					htmlEscape(title) +
 				'</span>' +
-				'<div class="fc-clear"/>' +
+				'<div class="fc-clear"></div>' +
 			'</div>' +
 			'<div class="fc-body ' + view.widgetContentClass + '">' +
 				'<div class="fc-event-container"></div>' +

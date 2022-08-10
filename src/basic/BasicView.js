@@ -84,7 +84,7 @@ var BasicView = FC.BasicView = View.extend({
 
 		this.scroller.render();
 		var dayGridContainerEl = this.scroller.el.addClass('fc-day-grid-container');
-		var dayGridEl = $('<div class="fc-day-grid" />').appendTo(dayGridContainerEl);
+		var dayGridEl = $('<div class="fc-day-grid" ></div>').appendTo(dayGridContainerEl);
 		this.el.find('.fc-body > tr > td').append(dayGridContainerEl);
 
 		this.dayGrid.setElement(dayGridEl);

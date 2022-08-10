@@ -60,7 +60,7 @@ Calendar.mixin({
 			el.toggleClass('fc-rtl', opts.isRTL);
 		});
 
-		this.contentEl = $("<div class='fc-view-container'/>").prependTo(el);
+		this.contentEl = $("<div class='fc-view-container'></div>").prependTo(el);
 
 		this.initToolbars();
 		this.renderHeader();
@@ -134,7 +134,7 @@ Calendar.mixin({
 				(this.viewsByType[viewType] = this.instantiateView(viewType));
 
 			this.view.setElement(
-				$("<div class='fc-view fc-" + viewType + "-view' />").appendTo(this.contentEl)
+				$("<div class='fc-view fc-" + viewType + "-view' ></div>").appendTo(this.contentEl)
 			);
 			this.toolbarsManager.proxyCall('activateButton', viewType);
 		}
