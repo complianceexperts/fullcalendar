@@ -44,7 +44,7 @@ describe('ListView rendering', function() {
 
 			it('filters events through eventRender', function() {
 				options.eventRender = function(event, el) {
-					el.find('.fc-event-dot').replaceWith('<span class="custom-icon" />');
+					el.find('.fc-event-dot').replaceWith('<span class="custom-icon" ></span>');
 				};
 
 				$('#cal').fullCalendar(options);

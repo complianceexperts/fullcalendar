@@ -18,7 +18,7 @@
 		// build the locale selector's options
 		$.each($.fullCalendar.locales, function(localeCode) {
 			$('#locale-selector').append(
-				$('<option/>')
+				$('<option></option>')
 					.attr('value', localeCode)
 					.prop('selected', localeCode == currentLocaleCode)
 					.text(localeCode)

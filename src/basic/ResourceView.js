@@ -257,7 +257,7 @@ var resourceDayGridMethods = {
 
 		if (!isDayNumberVisible && !view.cellWeekNumbersVisible) {
 			// no numbers in day cell (week number must be along the side)
-			return '<td/>'; //  will create an empty space above events :(
+			return '<td></td>'; //  will create an empty space above events :(
 		}
 
 		classes = this.getDayClasses(date);

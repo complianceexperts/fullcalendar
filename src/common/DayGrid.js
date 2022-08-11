@@ -148,7 +148,7 @@ var DayGrid = FC.DayGrid = Grid.extend(DayTableMixin, {
 
 		if (!isDayNumberVisible && !view.cellWeekNumbersVisible) {
 			// no numbers in day cell (week number must be along the side)
-			return '<td/>'; //  will create an empty space above events :(
+			return '<td></td>'; //  will create an empty space above events :(
 		}
 
 		classes = this.getDayClasses(date);
@@ -450,13 +450,13 @@ var DayGrid = FC.DayGrid = Grid.extend(DayTableMixin, {
 
 		skeletonEl = $(
 			'<div class="fc-' + className + '-skeleton">' +
-				'<table><tr/></table>' +
+				'<table><tr></tr></table>' +
 			'</div>'
 		);
 		trEl = skeletonEl.find('tr');
 
 		if (startCol > 0) {
-			trEl.append('<td colspan="' + startCol + '"/>');
+			trEl.append('<td colspan="' + startCol + '"></td>');
 		}
 
 		trEl.append(
@@ -464,7 +464,7 @@ var DayGrid = FC.DayGrid = Grid.extend(DayTableMixin, {
 		);
 
 		if (endCol < colCnt) {
-			trEl.append('<td colspan="' + (colCnt - endCol) + '"/>');
+			trEl.append('<td colspan="' + (colCnt - endCol) + '"></td>');
 		}
 
 		this.bookendCells(trEl);

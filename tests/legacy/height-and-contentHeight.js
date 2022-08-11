@@ -88,7 +88,7 @@
 					describe(testInfo.description, function() {
 						if (testInfo.heightWrapper) {
 							beforeEach(function() {
-								calendarEl.wrap('<div class="calendar-container" style="height: 600px;" />');
+								calendarEl.wrap('<div class="calendar-container" style="height: 600px;" ></div>');
 							});
 						}
 
@@ -186,7 +186,7 @@
 						describe(testInfo.description, function() {
 							if (testInfo.heightWrapper) {
 								beforeEach(function() {
-									calendarEl.wrap('<div class="calendar-container" style="height: 600px;" />');
+									calendarEl.wrap('<div class="calendar-container" style="height: 600px;" ></div>');
 								});
 							}
 
@@ -244,7 +244,7 @@
 								describe(testInfo.description, function() {
 									if (testInfo.heightWrapper) {
 										beforeEach(function() {
-											calendarEl.wrap('<div class="calendar-container" style="height: 600px;" />');
+											calendarEl.wrap('<div class="calendar-container" style="height: 600px;" ></div>');
 										});
 									}
 

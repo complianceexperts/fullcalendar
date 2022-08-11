@@ -5,7 +5,7 @@ var BLUE_REGEX = /blue|rgb\(0,\s*0,\s*255\)/;
 
 
 function getStockScrollbarWidths(dir) {
-	var el = $('<div><div style="position:relative"/></div>')
+	var el = $('<div><div style="position:relative"></div></div>')
 		.css({
 			position: 'absolute',
 			top: -1000,

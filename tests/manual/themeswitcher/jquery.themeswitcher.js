@@ -197,7 +197,7 @@
     		switcherLinkStyle['-webkit-border-radius'] = "6px";
     	}
     	
-    	var switcherLink = $("<a/>")
+    	var switcherLink = $("<a></a>")
     		.addClass("jquery-ui-switcher-link")
     		.css(switcherLinkStyle)
     		.bind({
@@ -219,8 +219,8 @@
     		});
     	
     	// Title & Icon for switcher link	
-    	var switcherTitle = $("<span/>").addClass("jquery-ui-switcher-title").appendTo(switcherLink);
-    	$("<span/>").addClass("jquery-ui-switcher-arrow")
+    	var switcherTitle = $("<span></span>").addClass("jquery-ui-switcher-title").appendTo(switcherLink);
+    	$("<span></span>").addClass("jquery-ui-switcher-arrow")
     		.css({
     			"float": "right",
     			"width": "16px",
@@ -240,7 +240,7 @@
     		switcherTitle.text(settings.initialtext);
     	}
     	
-    	var switcherListHldr = $("<div/>")
+    	var switcherListHldr = $("<div></div>")
     		.addClass("jquery-ui-switcher-list-hldr")
     		.css({
     			"width": eval(settings.width+8)+"px",
@@ -269,7 +269,7 @@
     			switcherListHldr.css("-webkit-border-radius","0 0 6px 6px");
     		}
     		
-    	var switcherList = $("<ul/>")
+    	var switcherList = $("<ul></ul>")
     		.css({
     			"list-style": "none",
     			"margin": "0",
