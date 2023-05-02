@@ -12,7 +12,10 @@
 		module.exports = factory(require('jquery'));
 	}
 	else {
-		factory(jQuery);
+		// Check if a legacy jQuery version is specified in the project, if so, use the preferred legacy version
+		var jQueryLegacy = window.jQueryLegacy || null;
+		var jQueryInstance = (!jQueryLegacy ? jQuery : jQueryLegacy);
+		factory(jQueryInstance);
 	}
 })(function($) {
 
