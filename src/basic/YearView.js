@@ -818,7 +818,7 @@ var YearView = FC.YearView = View.extend({
 			}
 
 			s +='<div class="fc-year-monthly-name'+(monthsRow===0 ? ' fc-first' : '')+'">' +
-				'<a name="'+monthID+'" data-year="'+y+'" data-month="'+m+'" href="#">' + htmlEscape(monthName) + '</a>' +
+				'<a name="'+monthID+'" data-year="'+y+'" data-month="'+m+'" href="javascript:void(0)">' + htmlEscape(monthName) + '</a>' +
 				'</div>';
 
 			s +='<div class="fc-row '+headerClass+'">';
